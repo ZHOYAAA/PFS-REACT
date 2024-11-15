@@ -1,0 +1,220 @@
+/* Pengaturan default untuk light mode dan dark mode */
+/* Background untuk light mode */
+body.light-mode {
+  background-image: url('./components/img/light.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #000;
+}
+
+/* Background untuk dark mode */
+body.dark-mode {
+  background-image: url('./components/img/dark.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #f0f0f0;
+}
+
+/* Tema Glassmorphism */
+.glass-style {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+body.dark-mode .glass-style {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f0f0f0;
+}
+
+/* Card Utama untuk Task */
+.task-card {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.1);
+  border-radius: 24px;
+  padding: 22px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .task-card {
+  background: rgba(0, 0, 0, 0.3);
+  color: #ddd;
+}
+
+/* Teks dan Prioritas pada Kartu Tugas */
+.task-title, .priority-title, .task-status-wrapper, .status {
+  transition: color 0.3s;
+}
+
+/* Warna Prioritas */
+.priority {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.high-priority {
+  color: #ff4d4f;
+}
+
+.medium-priority {
+  color: #ffa940;
+}
+
+.low-priority {
+  color: #28a745;
+}
+
+body.dark-mode .high-priority {
+  color: #ff6b6b;
+}
+
+body.dark-mode .medium-priority {
+  color: #ffc069;
+}
+
+body.dark-mode .low-priority {
+  color: #6ee7b7;
+}
+
+/* Status Styling */
+.status {
+  background: rgba(125, 133, 146, 0.14);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .status.to-do {
+  background-color: #e0e0e0;
+  color: #555;
+}
+
+body.dark-mode .status.to-do {
+  background-color: #3a3b3c;
+  color: #ddd;
+}
+
+body.light-mode .status.in-progress {
+  background-color: #ffc107;
+  color: #333;
+}
+
+body.dark-mode .status.in-progress {
+  background-color: #ffb347;
+  color: #000;
+}
+
+body.light-mode .status.done {
+  background-color: #28a745;
+  color: #fff;
+}
+
+body.dark-mode .status.done {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Tombol dan Ikon */
+.icon-button {
+  transition: color 0.3s;
+}
+
+body.light-mode .icon-button {
+  color: #333;
+}
+
+body.dark-mode .icon-button {
+  color: #f0f0f0;
+}
+
+/* Tombol "Add Task" */
+.add-task-btn {
+  background-color: #6f42c1;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.add-task-btn:hover {
+  background-color: #5a3798;
+}
+
+body.dark-mode .add-task-btn {
+  background-color: #4615f8;
+}
+
+body.dark-mode .add-task-btn:hover {
+  background-color: #1a0fb4;
+}
+
+/* Tombol Dark Mode Toggle */
+.dark-mode-toggle {
+  background-color: #6c757d;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+body.light-mode .dark-mode-toggle:hover {
+  background-color: #565e64;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #4c4f52;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background-color: #3a3d40;
+}
+
+/* TaskForm modal styling */
+.task-form-modal .form-control {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .task-form-modal .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+label.form-label {
+  color: #000;
+}
+.modal-title.h4 {
+    color: rgb(238, 27, 27);
+}
+/* Styling teks dalam modal konfirmasi */
+.modal-body h5,
+.modal-body p {
+  color: #333; /* Warna teks default untuk mode terang */
+}
+
+body.dark-mode .modal-body h5,
+body.dark-mode .modal-body p {
+  color: #f0f0f0; /* Warna teks untuk mode gelap */
+}
